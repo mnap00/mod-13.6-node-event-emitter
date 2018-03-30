@@ -1,0 +1,20 @@
+{
+  "name": "learn_npm",
+  "version": "0.5.0",
+  "description": "package.json test file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "learn",
+    "node"
+  ],
+  "author": "mnap00",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.2.1"
+  }
+}
