@@ -1,3 +1,5 @@
+var OSinfo = require('./modules/OSinfo');
+
 process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', function() {
@@ -8,6 +10,7 @@ process.stdin.on('readable', function() {
             case '/exit':
                 process.stdout.write('Quitting app!\n');
                 process.exit();
+                break;
             case '/ver':
                 var version = process.versions.node;
                 process.stdout.write(version + '\n');
@@ -15,6 +18,12 @@ process.stdin.on('readable', function() {
             case '/lang':
                 var language = process.env.LANG;
                 process.stdout.write(language + '\n');
+                break;
+            case '/sayhello':
+                process.stdout.write('hello!\n');
+                break;
+            case '/getOSinfo':
+                OSinfo.print();
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n');
